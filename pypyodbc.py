@@ -1943,7 +1943,10 @@ class Cursor:
                 
                 return None
             else:
-                check_success(self, ret)
+                # Chaned this temporarily for INSERT and UPDATE Quereies. 
+                # Actual fix should be filter out the type of query and act accordingly.
+                # check_success(self, ret)
+                return None
                 
     def __next__(self):
         return self.next()
